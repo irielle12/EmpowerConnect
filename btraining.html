@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Course Registration</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: darkblue;
+        }
+        .message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function showMessage(event) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById("registrationForm").style.display = "none"; // Hide the form
+            document.getElementById("thankYouMessage").style.display = "block"; // Show the message
+        }
+    </script>
+</head>
+<body>
+
+    <form id="registrationForm" onsubmit="showMessage(event)">
+        <center>
+            <h2>Course Registration</h2>
+        </center>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+            <option value="">-- Select a Course --</option>
+            <option value="financial-literacy">Financial Literacy</option>
+            <option value="marketing-strategies">Marketing Strategies</option>
+            <option value="business-planning">Business Planning</option>
+            <option value="legal-compliance">Legal Compliance</option>
+        </select>
+
+        <input type="submit" value="Register"><br><br>
+        <a href="home.html">Back</a>
+    </form>
+
+    <div id="thankYouMessage" class="message">
+        <h3>Thank you for registering!</h3>
+        <p>We will get back to you shortly.</p>
+        <a href="home.html">Go Back to Home</a>
+    </div>
+
+</body>
+</html>
