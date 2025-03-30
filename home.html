@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowerConnect - Empowering Women Entrepreneurs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            height: 40px;
+        }
+        
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: bold;
+        }
+        
+        .hero {
+            height: 85vh;
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: black;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .hero button {
+            padding: 15px 25px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        
+        .hero button:hover {
+            background: darkgreen;
+        }
+        
+        .hero button a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .section {
+            padding: 20px 5%;
+            text-align: center;
+        }
+        
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .service {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .service img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .testimonials {
+            background: #007bff;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .testimonial-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .testimonial-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        
+        .faq {
+            text-align: left;
+        }
+        
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 10px; /* Increased padding for a larger footer */
+    font-size: 1.2em; /* Increased text size */
+}
+
+.footer div {
+    margin-top: 10px;
+}
+
+.footer img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer img:hover {
+    transform: scale(1.2);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EmpowerConnect</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#faqs">FAQs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="hero">
+        <h1>Empowering Women Entrepreneurs</h1>
+        <p>Access microfinance, training, and a supportive community.</p>
+        <button><a href="login.html">Get Started</a></button>
+    </div>
+    
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <p>EmpowerConnect is a platform that connects women entrepreneurs with
+            microfinance opportunities, business training resources, and a supportive
+            community network that will help increase their access to capital, enhance
+            their business skills, and improve their market reach, leading to increased
+            economic empowerment.
+            </p>
+    </section>
+    
+    <section class="section services" id="services">
+        <div class="service">
+            <img src="microfinnce.png" alt="Microfinance Access">
+            <h2>Microfinance Access</h2>
+            <p>We connect women entrepreneurs with a network of microfinance institutions offering tailored loan products.</p>
+            <a href="maccess.html" class="register-button">Apply</a>
+        </div>
+
+        <div class="service">
+            <img src="Business-Training.jpg" alt="Business Training">
+            <h2>Business Training</h2>
+            <p>Enhance your entrepreneurial skills with our comprehensive business training programs.</p>
+            <a href="btraining.html" class="register-button">Apply</a>
+        </div>
+
+        <div class="service">
+            <img src="comm.jpg" alt="Community Network">
+            <h2>Community Network</h2>
+            <p>Join a vibrant community of women entrepreneurs for networking and support.</p>
+        </div>
+    </section>
+    
+    <section class="section faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <h4>How do I apply for microfinance?</h4>
+        <p>Simply sign up and browse available funding options on our platform.</p>
+    </section>
+    
+    <footer class="footer" id="contact">
+        <p>&copy; 2025 EmpowerConnect. All rights reserved.</p>
+        <p>Follow us on social media:</p>
+        <div>
+            <a href="#"><img src="fb.png" alt="Facebook" width="20"></a>:@EmpowerConnect
+            <a href="#"><img src="twitter.png" alt="Twitter" width="20"></a>:@EmpowerConnect
+            <a href="#"><img src="Instagram_icon.png" alt="Instagram" width="20"></a>:@EmpowerConnect
+            <a href="#"><img src="phone.jpg" alt="phone" width="20"></a>:0780822528
+            
+        </div>
+    </footer>
+</body>
+</html>
