@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .join-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .join-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        .join-info {
+            margin-bottom: 20px;
+        }
+
+        .return-home {
+            margin-top: 10px;
+        }
+
+        /* Success message styling */
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="join-container">
+        <h2>Join Our WhatsApp Group</h2>
+        <div class="join-info">
+            <p>Share your WhatsApp number below to join our group and receive the latest information.</p>
+        </div>
+    
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message">
+            ✅ We will add you to our group shortly!
+        </div>
+    
+        <form id="joinForm">
+            <div class="form-group">
+                <label for="countryCode">Country Code:</label>
+                <select id="countryCode" name="countryCode">
+                    <option value="+1">United States (+1)</option>
+                    <option value="+44">United Kingdom (+44)</option>
+                    <option value="+91">India (+91)</option>
+                    <option value="+250">Rwanda (+250)</option>
+                    <option value="+254">Kenya (+254)</option>
+                    <option value="+256">Uganda (+256)</option>
+                    <option value="+255">Tanzania (+255)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp Number</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Enter your number" pattern="\d*" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Join</button>
+            </div>
+            <!-- Move Return Home link inside the form -->
+            <div class="return-home">
+                <a href="home.html">Return Home</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById("joinForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Hide the form
+            document.getElementById("joinForm").style.display = "none";
+
+            // Show success message
+            document.getElementById("successMessage").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
