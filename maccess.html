@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .submit button {
+            background-color: blue;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit button:hover {
+            background-color: darkblue;
+        }
+
+        .return-home {
+            margin-top: 10px;
+        }
+
+        /* Success message styling */
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Loan Application</h1>
+        
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message">
+            ✅ We will get back to you shortly. Thanks for your application!
+        </div>
+
+        <form id="loanForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="story">Your Story</label>
+                <textarea id="story" name="story" rows="5" placeholder="Tell us about your journey and what you need the loan for." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="business">Tell Us About Your Business</label>
+                <textarea id="business" name="business" rows="5" placeholder="Describe your business, its products/services, and your goals." required></textarea>
+            </div>
+            
+            <div class="submit">
+                <button type="submit">Submit Application</button>
+            </div>
+        </form>
+
+        <div class="return-home">
+            <a href="home.html">Return Home</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loanForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Hide the form
+            document.getElementById("loanForm").style.display = "none";
+
+            // Show success message
+            document.getElementById("successMessage").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>
